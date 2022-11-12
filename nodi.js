@@ -1,12 +1,12 @@
-const linki = require('express')
-const linkae = linki() //criação do servidor
+const htm = require('express')
+const html = htm()
 
-linkae.get('/',function(req,res){
-    res.send('Está tudo ok')
+html.get('/',function(req,res){
+
+    res.sendFile( __dirname + '/arquivo/arquivo.html')
 })
 
+html.listen(8081,function(){
 
-linkae.listen(8081,function(){ //função para ativar a porta
-    console.log('Programa funcionando.') 
-
+    console.log('Programa rodando!')
 })
